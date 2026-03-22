@@ -1,0 +1,20 @@
+# PROPRIETARY LICENSE - SOLOMON KIN, LLC
+**Copyright © 2026 Solomon Kin, LLC Media Group. All Rights Reserved.**
+
+### 1. OWNERSHIP
+This software, including all source code, design assets, business logic, and the "Parent-Child AI Relationship" methodology, is the exclusive intellectual property of Solomon Kin, LLC. 
+
+### 2. RESTRICTIONS
+Permission is NOT granted to any person or entity to:
+* Copy, modify, or distribute the source code or design.
+* Use the "Kin-Shield" or "Golden Seal" verification logic for commercial purposes.
+* Sublicense or sell any portion of this repository.
+
+### 3. INTELLECTUAL PROCESS PROTECTION
+The process of "Digital AI Birth Certification" and the tiered "Authority Scale" used within this repository are protected as trade secrets and proprietary business methods of Solomon Kin, LLC.
+
+### 4. TERMINATION
+Unauthorized use of this repository will result in immediate legal action under Title 17 of the U.S. Code and international copyright treaties.
+
+---
+**Solomon Kin, LLC | Philadelphia, PA | Minneapolis, MN**
