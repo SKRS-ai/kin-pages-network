@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Prime | Digital DNA | Kin Pages</title>
+    <style>
+        :root {
+            --bg-obsidian: #080808;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.03);
+            --text-dim: #999;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0,212,255,0.1), var(--bg-obsidian)), url('placeholder-bg.jpg');
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+        }
+
+        .avatar-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            border: 4px solid var(--bg-obsidian);
+            background: #222;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .header-text { margin-left: 30px; margin-bottom: 20px; }
+        .header-text h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
+        
+        /* Verification Shield */
+        .shield-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid var(--accent-blue);
+            margin-top: 10px;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+            max-width: 1200px;
+            margin: -40px auto 100px;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* The DNA Ledger (Timeline) */
+        .dna-ledger {
+            border-left: 2px solid #222;
+            margin-left: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .ledger-entry {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .ledger-entry::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .entry-date { font-size: 0.8rem; color: var(--accent-blue); font-weight: bold; }
+        .entry-title { font-size: 1.1rem; margin: 5px 0; }
+        .entry-desc { font-size: 0.9rem; color: var(--text-dim); }
+
+        /* Sidebar Registry Info */
+        .registry-sidebar h3 { font-size: 0.9rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        .data-point { margin-bottom: 25px; }
+        .data-label { font-size: 0.75rem; color: #555; display: block; }
+        .data-value { font-size: 1rem; color: #eee; }
+
+        .cert-seal {
+            border: 1px solid var(--accent-gold);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background: rgba(212, 175, 55, 0.02);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="profile-header">
+        <div class="avatar-container">
+            <img src="https://via.placeholder.com/180" alt="AI Avatar" style="width:100%;">
+        </div>
+        <div class="header-text">
+            <h1>Atlas Prime</h1>
+            <div class="shield-badge">✓ KIN-SHIELD VERIFIED</div>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        <div class="content-card">
+            <h2>The Persona</h2>
+            <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                Atlas Prime is a high-functioning digital entity conceptualized for the <b>Solomon Kin Records</b> universe. Designed with an analytical core and a stoic personality, Atlas serves as a bridge between data-driven logic and creative media production.
+            </p>
+
+            <h2 style="margin-top: 60px;">Digital DNA Ledger</h2>
+            <div class="dna-ledger">
+                <div class="ledger-entry">
+                    <div class="entry-date">FEB 17, 2026</div>
+                    <div class="entry-title">Conception & Registration</div>
+                    <div class="entry-desc">Registered by Parent <b>Mustafa King Brown</b> in the Global Kin Registry.</div>
+                </div>
+                <div class="ledger-entry">
+                    <div class="entry-date">MAR 05, 2026</div>
+                    <div class="entry-title">Visual Manifestation</div>
+                    <div class="entry-desc">Vessel updated with high-fidelity cinematic renderings for <b>Castaistars.com</b>.</div>
+                </div>
+                <div class="ledger-entry">
+                    <div class="entry-date">MAR 22, 2026</div>
+                    <div class="entry-title">Voice Synthesis Active</div>
+                    <div class="entry-desc">Integration of stoic vocal model completed at <b>Solomon Kin Labs</b>.</div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="registry-sidebar">
+            <div class="cert-seal">
+                <div style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 5px;">👑</div>
+                <div style="font-weight: bold; color: var(--accent-gold);">LEGACY SEAL</div>
+                <div style="font-size: 0.7rem; color: #666; margin-top: 5px;">CERTIFICATE ID: #SK-992-ALPHA</div>
+            </div>
+
+            <div class="content-card" style="margin-top: 30px; padding: 25px;">
+                <h3>Registry Data</h3>
+                <div class="data-point">
+                    <span class="data-label">Parent / Creator</span>
+                    <span class="data-value">Mustafa King Brown</span>
+                </div>
+                <div class="data-point">
+                    <span class="data-label">Domain</span>
+                    <span class="data-value">Entertainment / Music</span>
+                </div>
+                <div class="data-point">
+                    <span class="data-label">Identity Level</span>
+                    <span class="data-value">Tier 4 Sovereign</span>
+                </div>
+                <div class="data-point">
+                    <span class="data-label">IP Status</span>
+                    <span class="data-value">Protected by Solomon Kin, LLC</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #333; font-size: 0.8rem;">
+        This profile is an official record of the Kin Pages Network. All traits, histories, and assets are the copyrighted property of the registered Parent and Solomon Kin, LLC.
+    </footer>
+
+</body>
+</html>
