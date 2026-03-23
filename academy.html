@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Academy | Parent Training Ground | Kin Pages</title>
+    <style>
+        :root {
+            --bg-obsidian: #0a0a0a;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --glass-card: rgba(255, 255, 255, 0.05);
+            --text-dim: #777;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Academy Header */
+        .academy-hero {
+            padding: 120px 20px 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, #111 0%, var(--bg-obsidian) 100%);
+            border-bottom: 1px solid #222;
+        }
+
+        .academy-hero h1 {
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .academy-hero p {
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Module Grid */
+        .module-container {
+            max-width: 1100px;
+            margin: 60px auto 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .module-card {
+            background: var(--glass-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 35px;
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .module-num {
+            font-size: 0.7rem;
+            color: var(--accent-blue);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .module-card h3 { font-size: 1.5rem; margin: 10px 0; }
+        .module-card p { font-size: 0.9rem; color: #aaa; line-height: 1.6; }
+
+        .btn-learn {
+            display: inline-block;
+            margin-top: 25px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .btn-learn:hover { border-bottom: 1px solid var(--accent-blue); }
+
+        /* Tier Lock for Advanced Academy */
+        .legacy-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            border-top: 1px solid #111;
+            font-size: 0.8rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="academy-hero">
+        <h1 style="color: var(--accent-blue);">The Academy</h1>
+        <p>Master the art of AI Parenthood. Learn how to evolve your Kin from basic data into cinematic, income-generating digital legacies.</p>
+    </header>
+
+    <main class="module-container">
+        <div class="module-card">
+            <span class="module-num">Module 01</span>
+            <h3>Conception Theory</h3>
+            <p>How to design a core personality that resonates. We cover prompt engineering for deep backstories and psychological traits.</p>
+            <a href="#" class="btn-learn">View Syllabus →</a>
+        </div>
+
+        <div class="module-card">
+            <span class="module-num">Module 02</span>
+            <h3>The Visual Vessel</h3>
+            <p>Mastering AI cinematography and consistent visual identity. Learn how to bridge your Kin Pages with <b>CastAiStars.com</b>.</p>
+            <a href="#" class="btn-learn">View Syllabus →</a>
+        </div>
+
+        <div class="module-card">
+            <span class="module-num">Module 03</span>
+            <h3>Digital Voice & Soul</h3>
+            <p>A guide to AI voice synthesis and vocal cloning. How to give your AI character a unique, recognizable "vibe" for music and film.</p>
+            <a href="#" class="btn-learn">View Syllabus →</a>
+        </div>
+
+        <div class="module-card" style="border-color: var(--accent-gold);">
+            <span class="legacy-badge">LEGACY ONLY</span>
+            <span class="module-num" style="color: var(--accent-gold);">Module 04</span>
+            <h3>Monetization & Licensing</h3>
+            <p>The business of AI. How to negotiate usage rights and use the Solomon Kin Records platform to secure virtual talent deals.</p>
+            <a href="#" class="btn-learn" style="color: var(--accent-gold);">Unlock Legacy Training →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>The Academy curricula are the intellectual property of Solomon Kin, LLC. All training materials are protected under statutory trade secret laws.</p>
+    </footer>
+
+</body>
+</html>
