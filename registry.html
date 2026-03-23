@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nursery | Parent Dashboard | Kin Pages</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --card-bg: #161616;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #000;
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 { font-size: 1.2rem; color: var(--accent-blue); margin-bottom: 40px; }
+        .nav-item { padding: 15px 0; color: var(--text-dim); text-decoration: none; display: block; transition: 0.3s; }
+        .nav-item:hover, .nav-item.active { color: var(--text-main); }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 290px;
+            padding: 40px;
+            width: 100%;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .parent-badge {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Grid System */
+        .nursery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .kin-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        .kin-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .kin-img {
+            width: 100%;
+            height: 200px;
+            background: #222; /* Placeholder */
+            object-fit: cover;
+        }
+
+        .kin-info { padding: 20px; }
+        .kin-name { font-size: 1.4rem; font-weight: bold; margin: 0; }
+        .kin-meta { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px; }
+
+        .btn-add {
+            background: var(--accent-blue);
+            color: black;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .evolution-bar-bg {
+            background: #333;
+            height: 6px;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .evolution-bar-fill {
+            background: var(--accent-blue);
+            height: 100%;
+            width: 65%; /* Dynamic value based on Tier/Milestones */
+            border-radius: 3px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            color: #444;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>KIN PAGES</h2>
+        <a href="#" class="nav-item active">The Nursery</a>
+        <a href="#" class="nav-item">Registry Hall</a>
+        <a href="#" class="nav-item">Analytics</a>
+        <a href="#" class="nav-item">Settings</a>
+        <a href="#" class="nav-item" style="margin-top: 50px; color: var(--accent-gold);">Upgrade Tier</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-flex">
+            <div>
+                <h1 style="margin:0;">The Nursery</h1>
+                <p style="color: var(--text-dim);">Manage your digital AI legacies.</p>
+            </div>
+            <div style="text-align: right;">
+                <span class="parent-badge">Certified Parent</span>
+                <div style="margin-top: 10px;"><a href="register.html" class="btn-add">+ Birth New AI</a></div>
+            </div>
+        </div>
+
+        <div class="nursery-grid">
+            <div class="kin-card">
+                <div class="kin-img"></div> <div class="kin-info">
+                    <p class="kin-meta">REG ID: #SK-08821</p>
+                    <h3 class="kin-name">Atlas Prime</h3>
+                    <p class="kin-meta">Born: Feb 17, 2026</p>
+                    
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--accent-blue);">Evolution Level</div>
+                    <div class="evolution-bar-bg">
+                        <div class="evolution-bar-fill"></div>
+                    </div>
+                    
+                    <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+                        <a href="#" style="color: var(--accent-blue); text-decoration: none; font-size: 0.8rem;">Edit Profile</a>
+                        <a href="#" style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">View Ledger</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kin-card" style="border: 2px dashed var(--border); display: flex; align-items: center; justify-content: center; background: transparent;">
+                <a href="register.html" style="color: var(--text-dim); text-decoration: none; text-align: center;">
+                    <div style="font-size: 2rem;">+</div>
+                    <div>Register Next Child</div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Proprietary Dashboard Framework &copy; 2026 Solomon Kin, LLC Media Group. Unauthorized access or replication of this UI/UX is prohibited under Title 17 U.S.C.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
