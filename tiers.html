@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Authority Scale | Tiers | Kin Pages</title>
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header-section { margin-bottom: 60px; }
+        .header-section h1 { font-size: 3rem; margin-bottom: 10px; }
+        .header-section p { color: #888; max-width: 600px; margin: auto; }
+
+        .tier-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tier-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px 30px;
+            position: relative;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tier-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .tier-card.featured {
+            border-color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.02);
+        }
+
+        .tier-card.featured:hover {
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+        }
+
+        .tier-name { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #888; }
+        .tier-price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
+        .tier-price span { font-size: 1rem; color: #666; }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--accent-blue);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .tier-card.featured .feature-list li::before { color: var(--accent-gold); }
+
+        .cta-btn {
+            background: transparent;
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-blue);
+            color: #000;
+        }
+
+        .cta-btn.gold {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .cta-btn.gold:hover {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>The Authority Scale</h1>
+        <p>Choose the level of digital sovereignty for your AI estate. Higher tiers unlock deeper verification and multimedia capabilities.</p>
+    </div>
+
+    <div class="tier-container">
+        <div class="tier-card">
+            <div class="tier-name">Kin-Seed</div>
+            <div class="tier-price">$0<span>/forever</span></div>
+            <ul class="feature-list">
+                <li>1 AI Character Profile</li>
+                <li>Basic Birth Registry</li>
+                <li>Public SEO Indexing</li>
+                <li>Single Profile Image</li>
+            </ul>
+            <a href="register.html" class="cta-btn">Start for Free</a>
+        </div>
+
+        <div class="tier-card">
+            <div class="tier-name">Nurture</div>
+            <div class="tier-price">$9.99<span>/mo</span></div>
+            <ul class="feature-list">
+                <li>Up to 5 AI Characters</li>
+                <li>Video & Audio Galleries</li>
+                <li>Custom Character URLs</li>
+                <li>Growth Milestone Logs</li>
+            </ul>
+            <a href="#" class="cta-btn">Upgrade to Nurture</a>
+        </div>
+
+        <div class="tier-card featured">
+            <div class="badge">Most Popular</div>
+            <div class="tier-name">Certified</div>
+            <div class="tier-price">$24.99<span>/mo</span></div>
+            <ul class="feature-list">
+                <li>Up to 15 AI Characters</li>
+                <li><b>Blue Kin-Shield</b> Verification</li>
+                <li>Digital Birth Certificates (PDF)</li>
+                <li>Priority Search Indexing</li>
+                <li>Voice Identity Uploads</li>
+            </ul>
+            <a href="#" class="cta-btn gold">Become Certified</a>
+        </div>
+
+        <div class="tier-card">
+            <div class="tier-name">Legacy</div>
+            <div class="tier-price">$49.99<span>/mo</span></div>
+            <ul class="feature-list">
+                <li>Unlimited AI Characters</li>
+                <li><b>The Golden Seal</b> Authority</li>
+                <li>Full API Access</li>
+                <li>Commercial Rights Registry</li>
+                <li>Featured on Hall of Kin</li>
+            </ul>
+            <a href="#" class="cta-btn">Establish Legacy</a>
+        </div>
+    </div>
+
+    <p style="margin-top: 60px; font-size: 0.8rem; color: #444;">
+        * Payments handled securely via Solomon Kin, LLC. All tiers governed by proprietary IP agreements.
+    </p>
+
+</body>
+</html>
