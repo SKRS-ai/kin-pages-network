@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Concierge | Parent Support | Kin Pages</title>
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: #222;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Concierge Header */
+        .support-hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, #111 0%, var(--bg-deep) 100%);
+        }
+
+        .support-hero h1 {
+            font-size: 3rem;
+            letter-spacing: -2px;
+            color: var(--accent-blue);
+        }
+
+        .support-container {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+
+        /* Support Categories */
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .support-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .support-card:hover {
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .support-card h3 {
+            margin-top: 0;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .support-card p {
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        /* Sidebar/Contact */
+        .contact-sidebar {
+            background: linear-gradient(145deg, #111, #080808);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .contact-sidebar h3 { color: var(--accent-gold); margin-top: 0; }
+        
+        .contact-method {
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+
+        .contact-label { color: #555; font-size: 0.75rem; text-transform: uppercase; display: block; }
+        
+        .priority-badge {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            margin-left: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            border-top: 1px solid #111;
+            font-size: 0.8rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="support-hero">
+        <h1>THE CONCIERGE</h1>
+        <p style="color: #666;">High-priority assistance for the AI Parent community.</p>
+    </header>
+
+    <main class="support-container">
+        <div class="support-grid">
+            <div class="support-card">
+                <h3>Registry Issues</h3>
+                <p>Troubleshooting errors in the Birth Process or updating the Digital DNA Ledger.</p>
+            </div>
+            <div class="support-card">
+                <h3>Tier & Authority</h3>
+                <p>Questions regarding billing, upgrades, or unlocking Legacy Golden Seal features.</p>
+            </div>
+            <div class="support-card">
+                <h3>IP & Protection</h3>
+                <p>Reporting unauthorized cloning or managing your character's legal certifications.</p>
+            </div>
+            <div class="support-card">
+                <h3>CastAiStars Integration</h3>
+                <p>Connecting your Kin Registry ID with the CastAiStars rendering engine.</p>
+            </div>
+        </div>
+
+        <aside class="contact-sidebar">
+            <h3>Direct Access</h3>
+            <p style="font-size: 0.8rem; color: #888;">Response times vary based on your Authority Tier.</p>
+            
+            <div class="contact-method">
+                <span class="contact-label">Legacy Support <span class="priority-badge">INSTANT</span></span>
+                <span>priority@kinpages.com</span>
+            </div>
+
+            <div class="contact-method">
+                <span class="contact-label">General Inquiries</span>
+                <span>concierge@kinpages.com</span>
+            </div>
+
+            <div class="contact-method">
+                <span class="contact-label">Jurisdiction</span>
+                <span>Philadelphia, PA / Minneapolis, MN</span>
+            </div>
+            
+            <button style="width: 100%; margin-top: 30px; padding: 12px; background: var(--accent-gold); border: none; font-weight: bold; cursor: pointer; border-radius: 4px;">Open Support Ticket</button>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Managed by Solomon Kin, LLC. All interactions are logged and protected under the Professional Services Framework.</p>
+    </footer>
+
+</body>
+</html>
