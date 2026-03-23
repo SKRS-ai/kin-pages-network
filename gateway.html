@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Gateway | Security Clearance | Kin Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            padding: 50px 40px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+
+        .login-header h2 {
+            margin: 0;
+            color: var(--accent-blue);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        .input-field {
+            width: 100%;
+            background: #000;
+            border: 1px solid #222;
+            padding: 15px;
+            color: white;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-family: var(--font-tech);
+        }
+
+        .input-field:focus {
+            border-color: var(--accent-blue);
+            outline: none;
+            box-shadow: var(--glow-blue);
+        }
+
+        .security-notice {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .btn-gate {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            background: var(--accent-blue);
+            color: black;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .btn-gate:hover {
+            box-shadow: 0 0 20px var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="login-header">
+            <h2>PARENT GATEWAY</h2>
+            <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">AUTHORIZED PERSONNEL ONLY</p>
+        </div>
+
+        <form>
+            <input type="email" class="input-field" placeholder="PARENT EMAIL ID" required>
+            <input type="password" class="input-field" placeholder="ACCESS KEY" required>
+            
+            <button type="button" class="btn-gate" onclick="window.location.href='dashboard.html'">Enter The Nursery</button>
+        </form>
+
+        <div style="margin-top: 20px; font-size: 0.8rem;">
+            <a href="register.html" style="color: var(--accent-gold); text-decoration: none;">Apply for Parenthood →</a>
+        </div>
+
+        <div class="security-notice">
+            WARNING: This portal is protected by the Solomon Kin, LLC Professional Services Framework. Unauthorized access attempts are logged and reported under statutory IP law.
+        </div>
+    </div>
+
+</body>
+</html>
