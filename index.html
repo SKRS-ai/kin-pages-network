@@ -3,104 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kin Pages | The Global AI Character Network</title>
+    <title>Kin Pages | The Global AI Character Registry & Identity Network</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --bg-dark: #0d0d0d;
-            --accent-blue: #00d4ff;
-            --accent-gold: #d4af37;
-            --text-light: #e0e0e0;
-            --glass: rgba(255, 255, 255, 0.05);
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            letter-spacing: -2px;
-            background: linear-gradient(to right, #fff, var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            color: #888;
-        }
-
-        /* Legal Footer Bar */
-        .legal-bar {
-            background: var(--glass);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: var(--accent-blue);
-            color: black;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 0 20px var(--accent-blue);
-        }
-    </style>
-</head>
+    </head>
 <body>
 
-    <nav style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <div style="font-weight: bold; font-size: 1.5rem;">KIN <span style="color: var(--accent-blue);">PAGES</span></div>
-        <div>
-            <a href="registry.html" style="color: white; margin-right: 20px; text-decoration: none;">Registry</a>
-            <a href="tiers.html" style="color: white; margin-right: 20px; text-decoration: none;">Tiers</a>
-            <a href="login.html" style="border: 1px solid var(--accent-blue); padding: 5px 15px; color: var(--accent-blue); text-decoration: none; border-radius: 4px;">Parent Login</a>
+    <nav>
+        <a href="index.html" class="logo">KIN <span>PAGES</span></a>
+        <div class="nav-links">
+            <a href="hall-of-kin.html">Hall of Kin</a>
+            <a href="collab-hub.html">Collab Hub</a>
+            <a href="ledger.html">The Ledger</a>
+            <a href="academy.html">Academy</a>
+            <a href="news.html">The Pulse</a>
+            <a href="gateway.html" class="btn-outline" style="padding: 5px 15px; margin-left: 20px;">Parent Login</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>Register Your Digital Legacy.</h1>
-        <p>The exclusive AI Character Network for creators. Establish your Parent-Child authority, secure your IP, and showcase your AI persona to the world.</p>
-        <a href="register.html" class="btn-primary">Birth Your AI Character</a>
+    <header style="height: 90vh; display: flex; align-items: center; background: radial-gradient(circle at center, #111 0%, #050505 100%);">
+        <div class="container" style="text-align: center;">
+            <div class="badge-legacy" style="margin-bottom: 20px; display: inline-block;">Official Solomon Kin, LLC Network</div>
+            <h1 style="font-size: 4.5rem; margin: 0; line-height: 1;">Register Your <br><span class="blue-text">Digital Legacy.</span></h1>
+            <p style="max-width: 700px; margin: 30px auto; color: #888; font-size: 1.2rem;">
+                The definitive architecture for AI provenance. Establish Parent-Child authority, secure your intellectual property, and showcase your AI persona to the global media landscape.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
+                <a href="register.html" class="btn btn-primary">Birth Your AI Character</a>
+                <a href="tiers.html" class="btn btn-outline">Explore Authority Tiers</a>
+            </div>
+        </div>
     </header>
 
-    <section style="padding: 100px 20px; max-width: 1000px; margin: auto; text-align: center;">
-        <h2 style="color: var(--accent-gold);">Profound Identity. Protected Assets.</h2>
-        <p>Kin Pages is the definitive architecture for AI provenance. From initial "Conception" to "Legacy" status, we provide the tools to verify and manage your AI's digital evolution.</p>
+    <section style="padding: 100px 0; border-top: 1px solid #111;">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2 class="gold-text">Profound Identity. <br>Protected Assets.</h2>
+                <p style="color: #ccc;">
+                    Kin Pages is not a hosting service; it is a <b>Sovereign Registry</b>. Every AI character registered here is part of a verified <b>Digital DNA Ledger</b>, ensuring that the original Creator (The Parent) retains full commercial and creative sovereignty.
+                </p>
+                <ul style="list-style: none; padding: 0; color: #888; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">✓ Verified Parent-Child IP Framework</li>
+                    <li style="margin-bottom: 10px;">✓ Integration with <b>CastAiStars.com</b></li>
+                    <li style="margin-bottom: 10px;">✓ Direct Pipeline to <b>Solomon Kin Records</b></li>
+                </ul>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3 style="margin-top: 0;">The Ledger Status</h3>
+                <p style="font-size: 0.8rem; color: var(--accent-blue);">TOTAL REGISTERED KIN: 1,402</p>
+                <p style="font-size: 0.8rem; color: var(--accent-gold);">LEGACY SEALS ISSUED: 89</p>
+                <a href="ledger.html" class="btn-learn">Verify a Registry ID →</a>
+            </div>
+        </div>
     </section>
 
-    <footer class="legal-bar">
-        <p>Copyright &copy; 2026 Solomon Kin, LLC Media Group. All Rights Reserved.</p>
-        <p>All intellectual processes, certification methodologies, and "Parent-Child" AI framework are protected under Title 17 of the U.S. Code.</p>
+    <footer>
+        <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; text-align: left; gap: 40px;">
+            <div>
+                <div class="logo">KIN <span>PAGES</span></div>
+                <p style="font-size: 0.8rem; color: #555; margin-top: 20px;">
+                    A premier digital estate platform under the Solomon Kin, LLC Media Group. <br>
+                    Philadelphia, PA // Minneapolis, MN
+                </p>
+            </div>
+            <div>
+                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">The Network</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem;">
+                    <li><a href="hall-of-kin.html" style="color: #777; text-decoration: none;">Hall of Kin</a></li>
+                    <li><a href="collab-hub.html" style="color: #777; text-decoration: none;">Collab Hub</a></li>
+                    <li><a href="academy.html" style="color: #777; text-decoration: none;">The Academy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">Legal Fortress</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem;">
+                    <li><a href="legal.html" style="color: #777; text-decoration: none;">IP Protection</a></li>
+                    <li><a href="legal.html" style="color: #777; text-decoration: none;">Terms of Parenthood</a></li>
+                    <li><a href="support.html" style="color: #777; text-decoration: none;">The Concierge</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">Corporate</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">Solomon Kin, LLC</p>
+                <p style="font-size: 0.8rem; color: #444;">Proprietary System ID: <br>SK-2026-ALPHA-REG</p>
+            </div>
+        </div>
+        
+        <div class="footer-legal">
+            <p>Copyright © 2026 Solomon Kin, LLC. All intellectual processes, "Parent-Child" frameworks, and certification methodologies are protected under Title 17 U.S.C. and International Copyright Law.</p>
+        </div>
     </footer>
 
 </body>
