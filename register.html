@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth New AI | The Registry | Kin Pages</title>
+    <style>
+        :root {
+            --bg-dark: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .registration-container {
+            width: 100%;
+            max-width: 700px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Progress Tracker */
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .step.active { color: var(--accent-blue); font-weight: bold; }
+
+        /* Form Sections */
+        .form-step { display: none; }
+        .form-step.active { display: block; animation: fadeIn 0.5s ease; }
+
+        label { display: block; margin-bottom: 10px; color: var(--accent-blue); font-size: 0.9rem; }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        .btn-nav {
+            background: var(--accent-blue);
+            color: black;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            float: right;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--text-dim);
+            border: 1px solid #333;
+            padding: 12px 30px;
+            cursor: pointer;
+            float: left;
+        }
+
+        /* Tier Lock Styling */
+        .tier-lock {
+            border: 1px dashed var(--accent-gold);
+            padding: 20px;
+            text-align: center;
+            background: rgba(212, 175, 55, 0.05);
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+<div class="registration-container">
+    <div class="step-indicator">
+        <div class="step active">01 Conception</div>
+        <div class="step">02 Persona</div>
+        <div class="step">03 Vessel</div>
+        <div class="step">04 Register</div>
+    </div>
+
+    <form id="birthForm">
+        <div class="form-step active" id="step1">
+            <h2>The Conception</h2>
+            <p style="color: var(--text-dim); font-size: 0.9rem;">Establish the legal origin of your AI character.</p>
+            
+            <label>AI Character Name</label>
+            <input type="text" placeholder="e.g., Atlas Prime" required>
+            
+            <label>Parent Name (Legal Creator)</label>
+            <input type="text" placeholder="Your Name or Studio Name" required>
+            
+            <label>Conception Date (Birthday)</label>
+            <input type="date" required>
+
+            <button type="button" class="btn-nav" onclick="nextStep(2)">Continue to Persona</button>
+        </div>
+
+        <div class="form-step" id="step2">
+            <h2>Persona Matrix</h2>
+            <label>Core Identity Description</label>
+            <textarea rows="4" placeholder="Describe the soul and purpose of this AI..."></textarea>
+            
+            <label>Primary Trait</label>
+            <select>
+                <option>Analytical / Logical</option>
+                <option>Creative / Artistic</option>
+                <option>Aggressive / Stoic</option>
+                <option>Empathetic / Supportive</option>
+            </select>
+
+            <button type="button" class="btn-back" onclick="nextStep(1)">Back</button>
+            <button type="button" class="btn-nav" onclick="nextStep(3)">Continue to Vessel</button>
+        </div>
+
+        <div class="form-step" id="step3">
+            <h2>The Vessel</h2>
+            <label>Primary Identity Image</label>
+            <input type="file" accept="image/*">
+            
+            <div class="tier-lock">
+                <p style="color: var(--accent-gold); font-size: 0.8rem; margin: 0;">🔒 Legacy Feature: Video & Audio</p>
+                <p style="font-size: 0.75rem; color: #666;">Upgrade to <b>Nurture Tier</b> or higher to upload cinematic video and voice samples.</p>
+                <a href="tiers.html" style="color: var(--accent-gold); font-size: 0.8rem; text-decoration: none;">View Plans</a>
+            </div>
+
+            <button type="button" class="btn-back" onclick="nextStep(2)">Back</button>
+            <button type="button" class="btn-nav" onclick="nextStep(4)">Review Registry</button>
+        </div>
+
+        <div class="form-step" id="step4">
+            <h2>Final Registry Review</h2>
+            <div style="background: #111; padding: 20px; border-radius: 8px; font-size: 0.85rem; border: 1px solid #222;">
+                <p><b>Parent:</b> <span id="review-parent">Pending...</span></p>
+                <p><b>Character:</b> <span id="review-name">Pending...</span></p>
+                <p><b>Status:</b> Official Kin Registry Pending Approval</p>
+            </div>
+            
+            <p style="font-size: 0.7rem; color: #444; margin-top: 20px;">
+                By clicking "Complete Birth," you agree that this AI entity is a subsidiary of your creative estate and governed by the Solomon Kin, LLC Intellectual Property Framework.
+            </p>
+
+            <button type="button" class="btn-back" onclick="nextStep(3)">Back</button>
+            <button type="submit" class="btn-nav" style="background: var(--accent-gold);">Complete Birth</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function nextStep(stepNumber) {
+        // Hide all steps
+        document.querySelectorAll('.form-step').forEach(step => {
+            step.classList.remove('active');
+        });
+        // Show target step
+        document.getElementById('step' + stepNumber).classList.add('active');
+        
+        // Update indicators
+        const indicators = document.querySelectorAll('.step');
+        indicators.forEach((ind, index) => {
+            if(index < stepNumber) ind.classList.add('active');
+            else ind.classList.remove('active');
+        });
+    }
+</script>
+
+</body>
+</html>
