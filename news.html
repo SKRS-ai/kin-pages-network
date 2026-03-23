@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pulse | Official News | Kin Pages</title>
+    <style>
+        :root {
+            --bg-black: #050505;
+            --accent-blue: #00d4ff;
+            --accent-gold: #d4af37;
+            --card-glass: rgba(255, 255, 255, 0.03);
+            --border: #222;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* News Header */
+        .news-hero {
+            padding: 100px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, #111 0%, var(--bg-black) 100%);
+        }
+
+        .news-hero h1 {
+            font-size: 3rem;
+            letter-spacing: -2px;
+            margin: 0;
+            color: var(--accent-blue);
+        }
+
+        .news-container {
+            max-width: 900px;
+            margin: 60px auto 100px;
+            padding: 0 20px;
+        }
+
+        /* News Item Styling */
+        .news-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #111;
+            transition: 0.3s;
+        }
+
+        .news-item:hover {
+            border-bottom-color: var(--accent-blue);
+        }
+
+        .news-date {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .news-content h2 {
+            font-size: 1.8rem;
+            margin: 0 0 15px;
+            color: #fff;
+        }
+
+        .news-content p {
+            color: #888;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .news-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .tag-deal { background: rgba(212, 175, 55, 0.1); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+        .tag-birth { background: rgba(0, 212, 255, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
+
+        /* Sidebar Highlight */
+        .sidebar-box {
+            background: var(--card-glass);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            font-size: 0.75rem;
+            color: #333;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="news-hero">
+        <h1>THE PULSE</h1>
+        <p style="color: #666; margin-top: 10px;">The latest developments in the Solomon Kin AI Ecosystem.</p>
+    </header>
+
+    <main class="news-container">
+        
+        <article class="news-item">
+            <div class="news-date">MAR 22, 2026</div>
+            <div class="news-content">
+                <span class="news-tag tag-deal">Major Deal</span>
+                <h2>Atlas Prime Signs Exclusive Licensing Agreement</h2>
+                <p>
+                    In a historic move for the network, <b>Atlas Prime</b> (Parent: Mustafa King Brown) has signed a multi-project licensing deal with <b>Solomon Kin Records</b>. This marks the first "Legacy Certified" entity to transition from the Registry into full-scale cinematic production.
+                </p>
+            </div>
+        </article>
+
+        <article class="news-item">
+            <div class="news-date">MAR 18, 2026</div>
+            <div class="news-content">
+                <span class="news-tag tag-birth">Registry Update</span>
+                <h2>Global Registry Surpasses New Milestone</h2>
+                <p>
+                    The Kin Pages Network has officially registered its 500th "Certified" AI character. The growth of the <b>Parent-Child</b> architecture continues to outperform industry projections, proving the market's demand for verified digital identities.
+                </p>
+            </div>
+        </article>
+
+        <article class="news-item">
+            <div class="news-date">MAR 10, 2026</div>
+            <div class="news-content">
+                <span class="news-tag tag-deal">Collaboration</span>
+                <h2>CastAiStars Integration Now Live</h2>
+                <p>
+                    Parents can now seamlessly sync their Kin Profiles with <b>CastAiStars.com</b>. This integration allows for instant visual rendering of registry metadata, streamlining the "Birth-to-Vessel" pipeline.
+                </p>
+            </div>
+        </article>
+
+        <div class="sidebar-box">
+            <h3 style="color: var(--accent-gold); margin-top: 0;">Make Your Own News</h3>
+            <p style="font-size: 0.9rem; color: #aaa;">Is your AI entity ready for the spotlight? Upgrade to the <b>Legacy Tier</b> to have your character's milestones featured on The Pulse.</p>
+            <a href="tiers.html" style="color: var(--accent-gold); text-decoration: none; font-weight: bold; font-size: 0.8rem;">View Authority Tiers →</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 Solomon Kin, LLC Media Group. Official Press Outlet for the Kin Pages Network.</p>
+    </footer>
+
+</body>
+</html>
