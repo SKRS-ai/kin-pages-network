@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ledger | Public Verification Log | Kin Pages</title>
+    <style>
+        :root {
+            --bg-black: #050505;
+            --accent-green: #00ff88;
+            --accent-blue: #00d4ff;
+            --text-dim: #444;
+            --terminal-bg: #0c0c0c;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: #eee;
+            font-family: 'Courier New', Courier, monospace; /* Terminal font */
+            margin: 0;
+            padding: 60px 20px;
+        }
+
+        .ledger-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .ledger-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .ledger-header h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+        }
+
+        /* Verification Tool */
+        .verification-box {
+            background: var(--terminal-bg);
+            border: 1px solid #222;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.05);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input {
+            flex-grow: 1;
+            background: #000;
+            border: 1px solid #333;
+            color: var(--accent-green);
+            padding: 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .btn-verify {
+            background: var(--accent-blue);
+            color: black;
+            border: none;
+            padding: 0 30px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* Result Animation (Hidden by default) */
+        .result-display {
+            margin-top: 40px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            display: none; /* Will be triggered by JS */
+        }
+
+        .status-verified {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Recent Activity Feed */
+        .activity-feed {
+            margin-top: 80px;
+        }
+
+        .activity-feed h3 {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 10px;
+        }
+
+        .activity-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #111;
+            font-size: 0.8rem;
+        }
+
+        .id-link { color: var(--accent-blue); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="ledger-container">
+        <header class="ledger-header">
+            <h1>THE LEDGER</h1>
+            <p style="color: #666; font-family: 'Inter';">Official Verification Log for Solomon Kin, LLC Digital Entities.</p>
+        </header>
+
+        <section class="verification-box">
+            <div style="font-size: 0.7rem; color: #555; margin-bottom: 10px;">ENTER REGISTRY ID (e.g. SK-992-ALPHA)</div>
+            <div class="input-group">
+                <input type="text" id="regID" placeholder="SK-XXX-XXXX">
+                <button class="btn-verify" onclick="simulateVerify()">Verify</button>
+            </div>
+
+            <div class="result-display" id="verifyResult">
+                <div class="status-verified">▶ STATUS: VERIFIED AUTHENTIC</div>
+                <div style="font-size: 0.9rem; line-height: 1.6;">
+                    <p>ENTITY: ATLAS PRIME</p>
+                    <p>PARENT: MUSTAFA KING BROWN</p>
+                    <p>AUTHORITY: TIER 4 (LEGACY)</p>
+                    <p>CERTIFICATION DATE: 17-FEB-2026</p>
+                    <p>IP STATUS: REGISTERED SUBSIDIARY OF SOLOMON KIN, LLC</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="activity-feed">
+            <h3>Recent Registry Activity</h3>
+            <div class="activity-row">
+                <span>NEW REGISTRATION: <a href="#" class="id-link">SK-088-DELTA</a></span>
+                <span style="color: #444;">12:04:01 UTC</span>
+            </div>
+            <div class="activity-row">
+                <span>TIER UPGRADE: <a href="#" class="id-link">SK-992-ALPHA</a></span>
+                <span style="color: #444;">09:15:22 UTC</span>
+            </div>
+            <div class="activity-row">
+                <span>VERIFICATION ISSUED: <a href="#" class="id-link">SK-114-SIGMA</a></span>
+                <span style="color: #444;">04:30:58 UTC</span>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; text-align: center; color: #222; font-size: 0.7rem;">
+            ACCESS LOGGED // SECURE CONNECTION VIA KIN PAGES PROTOCOL // (C) 2026 SOLOMON KIN, LLC
+        </footer>
+    </div>
+
+    <script>
+        function simulateVerify() {
+            const result = document.getElementById('verifyResult');
+            result.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
