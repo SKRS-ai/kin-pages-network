@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hall of Kin | Global AI Registry | Kin Pages</title>
+    <style>
+        :root {
+            --bg-black: #050505;
+            --accent-gold: #d4af37;
+            --accent-blue: #00d4ff;
+            --card-glass: rgba(255, 255, 255, 0.03);
+            --text-gray: #777;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero / Search Section */
+        .gallery-hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at top, #111 0%, var(--bg-black) 100%);
+        }
+
+        .gallery-hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(to bottom, #fff, var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-container {
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            background: #111;
+            border: 1px solid #222;
+            padding: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Legacy Featured Section */
+        .legacy-section {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .section-label {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-label::after {
+            content: "";
+            height: 1px;
+            background: var(--accent-gold);
+            flex-grow: 1;
+            margin-left: 20px;
+            opacity: 0.3;
+        }
+
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .legacy-card {
+            background: linear-gradient(145deg, #111, #080808);
+            border: 1px solid var(--accent-gold);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.4s;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+
+        .legacy-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 400px;
+            background: #222; /* Placeholder */
+            object-fit: cover;
+        }
+
+        .legacy-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-gold);
+            color: black;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        /* Standard Registry List */
+        .registry-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .standard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .standard-card {
+            background: var(--card-glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .standard-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .standard-img {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #1a1a1a;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .card-title { font-size: 1.2rem; margin: 0; }
+        .card-parent { font-size: 0.8rem; color: var(--text-gray); }
+
+        footer {
+            border-top: 1px solid #111;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="gallery-hero">
+        <h1>The Hall of Kin</h1>
+        <p style="color: #666;">Behold the world's premier registry of verified AI identities.</p>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search by name, trait, or Registry ID...">
+            <button style="background: var(--accent-gold); border: none; padding: 0 25px; border-radius: 5px; font-weight: bold; cursor: pointer;">Search</button>
+        </div>
+    </header>
+
+    <section class="legacy-section">
+        <div class="section-label">👑 Featured Legacy Kin</div>
+        <div class="legacy-grid">
+            <div class="legacy-card">
+                <span class="legacy-badge">LEGACY VERIFIED</span>
+                <div class="card-img"></div>
+                <div style="padding: 25px;">
+                    <h2 class="card-title" style="font-size: 1.8rem;">Atlas Prime</h2>
+                    <p class="card-parent">Parent: Mustafa King Brown</p>
+                    <p style="font-size: 0.9rem; color: #ccc;">The stoic architect of the Solomon Kin universe.</p>
+                    <a href="profile.html" style="color: var(--accent-gold); text-decoration: none; font-weight: bold; font-size: 0.9rem;">View DNA Ledger →</a>
+                </div>
+            </div>
+
+            <div class="legacy-card">
+                <span class="legacy-badge">LEGACY VERIFIED</span>
+                <div class="card-img"></div>
+                <div style="padding: 25px;">
+                    <h2 class="card-title" style="font-size: 1.8rem;">Nova 7</h2>
+                    <p class="card-parent">Parent: Filthy Seduction Prod.</p>
+                    <p style="font-size: 0.9rem; color: #ccc;">A cinematic influencer optimized for CastAiStars.</p>
+                    <a href="profile.html" style="color: var(--accent-gold); text-decoration: none; font-weight: bold; font-size: 0.9rem;">View DNA Ledger →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registry-section">
+        <div class="section-label" style="color: var(--accent-blue);">Registry Feed</div>
+        <div class="standard-grid">
+            <div class="standard-card">
+                <div class="standard-img"></div>
+                <h3 class="card-title">Cipher</h3>
+                <p class="card-parent">Parent: Neo</p>
+                <div style="font-size: 0.7rem; color: var(--accent-blue); margin-top: 10px;">🛡️ CERTIFIED</div>
+            </div>
+            <div class="standard-card">
+                <div class="standard-img"></div>
+                <h3 class="card-title">Echo</h3>
+                <p class="card-parent">Parent: J. Smith</p>
+                <div style="font-size: 0.7rem; color: #444; margin-top: 10px;">BASIC REGISTERED</div>
+            </div>
+            <div class="standard-card">
+                <div class="standard-img"></div>
+                <h3 class="card-title">Solomon AI</h3>
+                <p class="card-parent">Parent: Mustafa King Brown</p>
+                <div style="font-size: 0.7rem; color: var(--accent-blue); margin-top: 10px;">🛡️ CERTIFIED</div>
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 Solomon Kin, LLC. All identities are verified via the proprietary Kin Pages Protocol.</p>
+    </footer>
+
+</body>
+</html>
