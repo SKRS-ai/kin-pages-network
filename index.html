@@ -3,93 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kin Pages | The Global AI Character Registry & Identity Network</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+    <title>KIN Pages | Tri-State Minority Yellow Pages | 11th Edition & Beyond</title>
+    <style>
+        :root { --kin-gold: #d4af37; --kin-black: #050505; --kin-grey: #111; --text: #ccc; }
+        body { background: var(--kin-black); color: var(--text); font-family: 'Courier New', monospace; margin: 0; line-height: 1.6; }
+
+        /* HEADER */
+        header { background: #000; border-bottom: 3px solid var(--kin-gold); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .kin-logo { color: var(--kin-gold); text-decoration: none; font-weight: bold; font-size: 1.6rem; letter-spacing: 5px; border: 2px solid var(--kin-gold); padding: 10px 25px; text-transform: uppercase; }
+        .header-links a { color: #888; text-decoration: none; font-size: 0.65rem; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* MARKET TICKER */
+        .market-ticker { height: 40px; background: #000; border-bottom: 1px solid #222; overflow: hidden; }
+
+        /* SEARCH HUB */
+        .search-vault { background: #0d0d0d; padding: 60px 40px; border-bottom: 1px solid #222; text-align: center; }
+        .master-search-bar { max-width: 1000px; margin: 0 auto 20px; display: flex; border: 2px solid var(--kin-gold); }
+        .master-search-bar input { flex: 1; background: #000; border: none; padding: 20px; color: #fff; font-size: 1.1rem; font-family: inherit; }
+        .btn-query { background: var(--kin-gold); color: #000; border: none; padding: 0 40px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        
+        .filter-blanket { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .filter-blanket select { background: #111; border: 1px solid #333; color: #999; padding: 12px; font-size: 0.7rem; cursor: pointer; }
+
+        /* STRATEGIC AD GALLERY */
+        .ad-gallery { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .ad-item { background: #0a0a0a; border: 1px solid #222; display: flex; align-items: center; text-decoration: none; transition: 0.3s; overflow: hidden; }
+        .ad-item:hover { border-color: var(--kin-gold); transform: translateY(-5px); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .ad-item img { width: 150px; height: 100px; object-fit: cover; border-right: 1px solid #222; }
+        .ad-content { padding: 15px 25px; }
+        .ad-content h4 { color: var(--kin-gold); margin: 0; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+        .ad-content p { color: #555; margin: 5px 0 0; font-size: 0.6rem; letter-spacing: 1px; }
+
+        /* PRICING TIERS */
+        .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 60px auto; padding: 0 40px; }
+        .tier-card { background: #0a0a0a; border: 1px solid #222; padding: 30px; text-align: center; transition: 0.4s; }
+        .tier-card.featured { border: 2px solid var(--kin-gold); }
+        .price { font-size: 2rem; color: #fff; margin: 20px 0; }
+        .tier-list { list-style: none; padding: 0; font-size: 0.7rem; color: #777; text-align: left; }
+
+        /* FOOTER */
+        footer { background: #000; border-top: 3px solid var(--kin-gold); padding: 80px 40px 40px; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; max-width: 1400px; margin: 0 auto; }
+        .footer-col h5 { color: var(--kin-gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .footer-col a { display: block; color: #444; text-decoration: none; font-size: 0.65rem; margin-bottom: 12px; }
+        .footer-col a:hover { color: #fff; }
+        .legacy-footer { text-align: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid #111; color: #333; font-size: 0.6rem; letter-spacing: 3px; }
+    </style>
+</head>
 <body>
 
-    <nav>
-        <a href="index.html" class="logo">KIN <span>PAGES</span></a>
-        <div class="nav-links">
-            <a href="hall-of-kin.html">Hall of Kin</a>
-            <a href="collab-hub.html">Collab Hub</a>
-            <a href="ledger.html">The Ledger</a>
-            <a href="academy.html">Academy</a>
-            <a href="news.html">The Pulse</a>
-            <a href="gateway.html" class="btn-outline" style="padding: 5px 15px; margin-left: 20px;">Parent Login</a>
-        </div>
-    </nav>
-
-    <header style="height: 90vh; display: flex; align-items: center; background: radial-gradient(circle at center, #111 0%, #050505 100%);">
-        <div class="container" style="text-align: center;">
-            <div class="badge-legacy" style="margin-bottom: 20px; display: inline-block;">Official Solomon Kin, LLC Network</div>
-            <h1 style="font-size: 4.5rem; margin: 0; line-height: 1;">Register Your <br><span class="blue-text">Digital Legacy.</span></h1>
-            <p style="max-width: 700px; margin: 30px auto; color: #888; font-size: 1.2rem;">
-                The definitive architecture for AI provenance. Establish Parent-Child authority, secure your intellectual property, and showcase your AI persona to the global media landscape.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
-                <a href="register.html" class="btn btn-primary">Birth Your AI Character</a>
-                <a href="tiers.html" class="btn btn-outline">Explore Authority Tiers</a>
-            </div>
+    <header>
+        <a href="index.html" class="kin-logo">KIN Pages</a>
+        <div class="header-links">
+            <a href="philly-sovereign-foundations.html">Foundations</a>
+            <a href="register-tier.html">Registration</a>
+            <a href="identity-vault.html">Identity Vault</a>
         </div>
     </header>
 
-    <section style="padding: 100px 0; border-top: 1px solid #111;">
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-            <div>
-                <h2 class="gold-text">Profound Identity. <br>Protected Assets.</h2>
-                <p style="color: #ccc;">
-                    Kin Pages is not a hosting service; it is a <b>Sovereign Registry</b>. Every AI character registered here is part of a verified <b>Digital DNA Ledger</b>, ensuring that the original Creator (The Parent) retains full commercial and creative sovereignty.
-                </p>
-                <ul style="list-style: none; padding: 0; color: #888; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;">✓ Verified Parent-Child IP Framework</li>
-                    <li style="margin-bottom: 10px;">✓ Integration with <b>CastAiStars.com</b></li>
-                    <li style="margin-bottom: 10px;">✓ Direct Pipeline to <b>Solomon Kin Records</b></li>
-                </ul>
-            </div>
-            <div class="card" style="text-align: center;">
-                <h3 style="margin-top: 0;">The Ledger Status</h3>
-                <p style="font-size: 0.8rem; color: var(--accent-blue);">TOTAL REGISTERED KIN: 1,402</p>
-                <p style="font-size: 0.8rem; color: var(--accent-gold);">LEGACY SEALS ISSUED: 89</p>
-                <a href="ledger.html" class="btn-learn">Verify a Registry ID →</a>
-            </div>
+    <div class="market-ticker">
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        { "symbols": [{"proName":"TVC:GOLD","title":"GOLD"},{"proName":"BITSTAMP:BTCUSD","title":"BTC"},{"proName":"FX:EURUSD","title":"EUR/USD"}], "colorTheme": "dark", "isTransparent": true }
+        </script>
+    </div>
+
+    <section class="search-vault">
+        <div class="master-search-bar">
+            <input type="text" placeholder="Search Names, Businesses, IDs, or Pronouns...">
+            <button class="btn-query">SEARCH</button>
+        </div>
+        <div class="filter-blanket">
+            <select>
+                <option>Culture: All Heritage</option>
+                <option>African American</option>
+                <option>Indigenous / First Nations</option>
+                <option>Hispanic / Latino</option>
+                <option>East Asian</option>
+                <option>South Asian</option>
+                <option>Middle Eastern</option>
+                <option>European / Caucasian</option>
+                <option>Pacific Islander</option>
+                <option>Multi-Cultural / Mixed</option>
+            </select>
+            <select>
+                <option>Identity: All Genders</option>
+                <option>Cisgender Man</option>
+                <option>Cisgender Woman</option>
+                <option>Transgender Man</option>
+                <option>Transgender Woman</option>
+                <option>Non-Binary / GNC</option>
+                <option>Genderfluid</option>
+                <option>Two-Spirit</option>
+            </select>
+            <select>
+                <option>Pronouns: All</option>
+                <option>He / Him</option>
+                <option>She / Her</option>
+                <option>They / Them</option>
+                <option>He / They</option>
+                <option>She / They</option>
+                <option>Ze / Hir</option>
+                <option>Ey / Em</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="ad-gallery">
+        <a href="philly-sovereign-foundations.html" class="ad-item">
+            <img src="foundation-support.png" alt="Foundation Support">
+            <div class="ad-content"><h4>Sovereign Support</h4><p>Global Non-Profit Registry</p></div>
+        </a>
+        <a href="amazing-kin-orgs.html" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (89).jpg" alt="Paramount Directory">
+            <div class="ad-content"><h4>Paramount Directory</h4><p>Elite Minority Business Hub</p></div>
+        </a>
+        <a href="#" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (84).jpg" alt="Clean Blue Green">
+            <div class="ad-content"><h4>Clean Blue Green</h4><p>Environmental Logistics</p></div>
+        </a>
+        <a href="#" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (68).jpg" alt="SKR Media">
+            <div class="ad-content"><h4>SKR Media Group</h4><p>Sovereign Path Media</p></div>
+        </a>
+        <a href="cast-ai-gaming.html" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (63).jpg" alt="Vexilla AutoPilot">
+            <div class="ad-content"><h4>Vexilla AutoPilot</h4><p>Hardware Console Systems</p></div>
+        </a>
+        <a href="#" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (57).jpg" alt="Vexilla PromptMask">
+            <div class="ad-content"><h4>Vexilla PromptMask</h4><p>Sovereign Data Security</p></div>
+        </a>
+        <a href="#" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (52).jpg" alt="IBINGOD Global">
+            <div class="ad-content"><h4>IBINGOD Trade</h4><p>International Trade Logistics</p></div>
+        </a>
+        <a href="#" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (51).jpg" alt="Synthetic Talent">
+            <div class="ad-content"><h4>Talent Registry</h4><p>Verified AI/Human Actors</p></div>
+        </a>
+        <a href="doomsday-observatory.html" class="ad-item">
+            <img src="Kin-Pages-Kinyellow (47).jpg" alt="Observatory">
+            <div class="ad-content"><h4>Doomsday Observatory</h4><p>Real-Time Global Risk Audit</p></div>
+        </a>
+        <a href="rare-books-collection.html" class="ad-item">
+            <img src="rare-books-banner.png" alt="Rare Books">
+            <div class="ad-content"><h4>Ancient Knowledge</h4><p>Rare Book Vault Access</p></div>
+        </a>
+    </section>
+
+    <section class="tier-grid">
+        <div class="tier-card">
+            <h3>VANGUARD BASIC</h3>
+            <div class="price">$49<span>/mo</span></div>
+            <ul class="tier-list"><li>Standard Listing</li><li>1 Cultural Tag</li></ul>
+        </div>
+        <div class="tier-card featured">
+            <h3>SOVEREIGN PRO</h3>
+            <div class="price">$149<span>/mo</span></div>
+            <ul class="tier-list"><li>Priority Search</li><li>Gender/Identity Tags</li></ul>
+        </div>
+        <div class="tier-card">
+            <h3>KIN COMMAND</h3>
+            <div class="price">$499<span>/mo</span></div>
+            <ul class="tier-list"><li>Main Page Feature</li><li>News Integration</li></ul>
         </div>
     </section>
 
     <footer>
-        <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; text-align: left; gap: 40px;">
-            <div>
-                <div class="logo">KIN <span>PAGES</span></div>
-                <p style="font-size: 0.8rem; color: #555; margin-top: 20px;">
-                    A premier digital estate platform under the Solomon Kin, LLC Media Group. <br>
-                    Philadelphia, PA // Minneapolis, MN
-                </p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>LEGACY PORTAL</h5>
+                <a href="editors-message.html">Editor's Message</a>
+                <a href="index.html">KIN Pages Home</a>
+                <a href="master-sitemap.html">Complete Site Map</a>
             </div>
-            <div>
-                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">The Network</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.8rem;">
-                    <li><a href="hall-of-kin.html" style="color: #777; text-decoration: none;">Hall of Kin</a></li>
-                    <li><a href="collab-hub.html" style="color: #777; text-decoration: none;">Collab Hub</a></li>
-                    <li><a href="academy.html" style="color: #777; text-decoration: none;">The Academy</a></li>
-                </ul>
+            <div class="footer-col">
+                <h5>TRADE & RECORDS</h5>
+                <a href="global-logistics.html">IBINGOD Trade</a>
+                <a href="media-broadcast.html">Solomon Kin Records</a>
+                <a href="amazing-kin-orgs.html">Elite Products</a>
             </div>
-            <div>
-                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">Legal Fortress</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.8rem;">
-                    <li><a href="legal.html" style="color: #777; text-decoration: none;">IP Protection</a></li>
-                    <li><a href="legal.html" style="color: #777; text-decoration: none;">Terms of Parenthood</a></li>
-                    <li><a href="support.html" style="color: #777; text-decoration: none;">The Concierge</a></li>
-                </ul>
+            <div class="footer-col">
+                <h5>TECH & IDENTITY</h5>
+                <a href="vexilla-identity-vault.html">Identity Vault</a>
+                <a href="cast-ai-gaming.html">Cast AI Gaming</a>
+                <a href="profile-dashboard.html">Member Forge</a>
             </div>
-            <div>
-                <h4 class="tech-font" style="font-size: 0.7rem; color: #444; text-transform: uppercase;">Corporate</h4>
-                <p style="font-size: 0.8rem; color: #777; margin: 0;">Solomon Kin, LLC</p>
-                <p style="font-size: 0.8rem; color: #444;">Proprietary System ID: <br>SK-2026-ALPHA-REG</p>
+            <div class="footer-col">
+                <h5>NEWS & MEDIA</h5>
+                <a href="#">The Filth Factor</a>
+                <a href="doomsday-observatory.html">Doomsday Feed</a>
+                <a href="#">Dockinstation TV</a>
+            </div>
+            <div class="footer-col">
+                <h5>FOUNDATIONS</h5>
+                <a href="philly-sovereign-foundations.html">Sovereign Foundations</a>
+                <a href="http://tbblusa.org">TBBLUSA National</a>
+                <a href="contact-support.html">Support Desk</a>
             </div>
         </div>
-        
-        <div class="footer-legal">
-            <p>Copyright © 2026 Solomon Kin, LLC. All intellectual processes, "Parent-Child" frameworks, and certification methodologies are protected under Title 17 U.S.C. and International Copyright Law.</p>
+        <div class="legacy-footer">
+            THE KIN PAGES DIRECTORY | TRI-STATE MINORITY YELLOW PAGES LEGACY | EST. 1999
         </div>
     </footer>
 
